@@ -1,0 +1,96 @@
+<div class="container">
+    <section>
+        <h5 class="center"><span class="red-text">Sélectionnez la géométrie de votre maison</span> parmi les formes proposées.</h5>
+        <div class="row choices">
+            <div class="four columns">
+                <div class="well">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-190 400.1 29.1 30" style="enable-background:new -190 400.1 29.1 42.8;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#D2D2D2;}
+                                .st1{fill:#FF4547;}
+                            </style>
+                            <g id="carre">
+                                <rect x="-190" y="405.4" class="st0" width="20.1" height="20.1"/>
+                            </g>
+                        </svg>
+                    <p class="choice">carrée rectangulaire</p>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="well">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-107 400.1 40.9 42.8" style="enable-background:new -107 400.1 40.9 42.8;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#D2D2D2;}
+                            .st1{fill:#FF4547;}
+                        </style>
+                        <g id="triangle">
+                            <g>
+                                <polygon class="st0" points="-66.1,425.2 -76.2,415.1 -76.1,415 -86.5,404.6 -86.6,404.7 -86.7,404.6 -97,415 -96.9,415.1 
+                                    -107,425.2 -96.7,435.5 -86.6,425.4 -76.5,435.5 		"/>
+                            </g>
+                            <g>
+                                <polygon class="st0" points="-66.1,425.2 -76.2,415.1 -76.1,415 -86.5,404.6 -86.6,404.7 -86.7,404.6 -97,415 -96.9,415.1 
+                                    -107,425.2 -96.7,435.5 -86.6,425.4 -76.5,435.5 		"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p class="choice">allongée</p>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="well">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-19.1 400.1 43.6 42.8" style="enable-background:new -19.1 400.1 43.6 42.8;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#D2D2D2;}
+                            .st1{fill:#FF4547;}
+                        </style>
+                        <g id="rectangle">
+                            <polygon class="st0" points="17.2,405.4 9.9,405.4 -4.5,405.4 -11.8,405.4 -19.1,405.4 -19.1,434.5 -4.5,434.5 -4.5,420.1 
+                                9.9,420.1 9.9,434.5 24.5,434.5 24.5,405.4 	"/>
+                        </g>
+                    </svg>
+                    <p class="choice">développée</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="center">
+            <a href="#step2" class="btn">Continuer</a>
+        </div>
+    </section>
+    <script>
+        unit = "";
+        $('.well').mouseover(function() {
+            var unit = $(this).children("svg").children("g").attr("id");
+
+            if (unit == "triangle") {
+                get = $(this).children("svg").children("g").children("g").children("polygon");
+            } else if (unit == "rectangle") {
+                get = $(this).children("svg").children("g").children("polygon");
+            } else {
+                get = $(this).children("svg").children("g").children("rect");
+            }
+
+            get.removeClass("st0");
+            get.addClass("st1");
+        });
+
+        $('.well').mouseleave(function() {
+            if (unit == "triangle") {
+                get = $('.well').children("svg").children("g").children("g").children("polygon");
+            } else if (unit == "rectangle") {
+                get = $('.well').children("svg").children("g").children("polygon");
+            } else {
+                get = $('.well').children("svg").children("g").children("rect");
+            }
+
+            get.removeClass("st1");
+            get.addClass("st0");
+            unit = "";
+        })
+    </script>
+</div>

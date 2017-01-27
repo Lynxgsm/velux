@@ -1,0 +1,64 @@
+<svg enable-background="new 0 0 404 306" id="main_house" version="1.1" viewBox="0 0 404 306" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="sol_1_">
+        
+<polygon fill="#E95353"
+         opacity="0.75"
+         points="179.3,85.7 372,197.7 243.7,271.7 179.1,233.7 243.7,197.5 179,159.6 115.7,197.7 51,159.7" />
+</g>
+<g id="mur">
+        
+<polygon fill="#E95353"
+         points="51,159.7 179.3,85.7 179.3,30.9 51,104.9" />
+        
+<polygon fill="#E95353"
+         points="179.3,85.7 179.3,30.9 372,142.9 372,197.7" />
+        
+<polygon fill="#E23737"
+         opacity="0.5"
+         points="243.7,197.5 179,159.6 179,104.8 243.7,142.7" />
+        
+<polygon fill="#E23737"
+         points="115.7,197.7 179,159.6 179,104.8 115.7,142.8" />
+        
+<polygon fill="#E23737"
+         opacity="0.75"
+         points="243.7,271.7 372,197.7 372,142.8 243.7,216.8" />
+        
+<polygon fill="#E23737"
+         opacity="0.5"
+         points="243.7,271.7 179,233.7 179,178.8 243.7,216.8" />
+        
+<polygon fill="#E95353"
+         points="179,233.7 243.7,197.5 243.7,142.7 179,178.9" />
+        
+<polygon fill="#E23737"
+         opacity="0.5"
+         points="115.7,197.7 51,159.7 51,104.8 115.7,142.8" />
+</g>
+<g id="toit_1_">
+        
+<polygon fill="#DBDBDB"
+         points="241.3,141.4 179,104.8 165.1,47.6 294.9,123.7" />
+        
+<polygon fill="#EAF6F5"
+         points="294.9,123.7 212,172.3 179,178.8 241.3,141.4" />
+        
+<polygon fill="#DBDBDB"
+         points="243.7,216.8 212,172.3 179,178.8" />
+        
+<polygon fill="#C4C4C4"
+         points="83.3,95.3 165.1,47.6 179,104.8 115.7,142.8" />
+        
+<polygon fill="#EFEFEF"
+         points="165.1,47.6 211.3,20.5 342,96 294.9,123.7" />
+        
+<polygon fill="#C4C4C4"
+         points="243.7,216.8 212,172.3 342,96 372,142.9" />
+        
+<polygon fill="#F5F5F5"
+         points="51,104.8 179.3,30.9 211.3,20.5 83.3,95.3" />
+        
+<polygon fill="#DBDBDB"
+         points="115.7,142.8 51,104.8 83.3,95.3" />
+</g>
+</svg>

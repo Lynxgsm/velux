@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Velux</title>
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/skeleton.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/svg.js"></script>
+    <script src="assets/js/svg.draggable.min.js"></script>
+    <script src="assets/js/vivus.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+
+<body ng-controller="mainController">
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="two columns">
+                    <img src="assets/img/velux-logosvg-113731.png" alt="" class="header-img">
+                </div>
+                <div class="ten columns">
+                    <div class="title animated fadeIn">
+                        <span class="main">{{titleUp}}</span> {{titleDown}}
+                        <p class="description">{{description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div ng-view class="animated fadeIn"></div>
+    <footer>
+        <div class="progress" data-value="0"></div>
+    </footer>
+</body>
+
+</html>
