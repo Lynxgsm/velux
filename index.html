@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,35 +8,139 @@
     <link rel="stylesheet" href="assets/css/skeleton.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/angular.min.js"></script>
-    <script src="assets/js/angular-route.min.js"></script>
     <script src="assets/js/svg.js"></script>
     <script src="assets/js/svg.draggable.min.js"></script>
-    <script src="assets/js/vivus.js"></script>
-    <script src="assets/js/TweenMax.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/TweenMax.js"></script>
+    <script src="assets/js/Draggable.js"></script>
 </head>
 
-<body ng-controller="mainController">
+<body>
     <nav>
         <div class="container">
             <div class="row">
                 <div class="two columns">
-                    <img src="assets/img/velux-logosvg-113731.png" alt="" class="header-img">
+                    <img src="assets/img/velux-logosvg-113731.png" alt="" class="header-img" />
                 </div>
                 <div class="ten columns">
                     <div class="title animated fadeIn">
-                        <span class="main">{{titleUp}}</span> {{titleDown}}
-                        <p class="description">{{description}}</p>
+                        <span class="main">Surface</span> des combles
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <div ng-view class="animated fadeIn"></div>
-    <footer>
-        <div class="progress" data-value="0"></div>
-    </footer>
+    <section>
+        <div class="row container-fluid">
+            <div class="three columns">
+                <p class="bigger">
+                    <span class="red-text">Définissez la surface de vos combles&nbsp</span>à l'aide de votre souris.</p>
+                <ul class="badges">
+                    <li class="item">L1:
+                        <span id="length_L1_centre">15</span>m</li>
+                    <li class="item">L2:
+                        <span id="length_L2_gauche">10</span>m</li>
+                    <li class="item">L3:
+                        <span id="length_L3_gauche">5</span>m</li>
+                    <li class="item">L4:
+                        <span id="length_L4_gauche">5</span>m</li>
+                    <li class="item">L5:
+                        <span id="length_L5_centre">10</span>m</li>
+                </ul>
+            </div>
+            <div class="nine columns">
+                <svg version="1.1" id="drawing" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 894 520" enable-background="new 0 0 894 520" xml:space="preserve">
+<g id="grille">
+    <polygon fill="none" stroke="#ADADAD" stroke-miterlimit="10" points="19.3,273.3 428,509.3 874,251.3 464,16  "/>
+    <polyline fill="none" stroke="#ADADAD" stroke-miterlimit="10" points="464,16 465.6,487.6 55.7,252.3 56.9,295 501.1,37.3 
+        502,466.5 92.3,231.1 93.6,316.2 538.5,58.8 538.2,445.6 129.6,209.5 130.4,337.9 575.7,80.1 575.7,423.9 166.9,187.9 167.2,358.7 
+        614.2,102.2 613.4,402.1 204.2,166.4 204.8,380.4 650.4,123 650.4,380.7 241.2,144.9 241.6,401.7 687.8,144.5 687.8,359 
+        278.7,123.3 278.7,423.1 725.1,165.8 724.4,337.9 315.7,101.8 315.5,444.4 762.1,187.1 762.1,316.1 352.6,80.5 353,466 
+        799.4,208.5 798.5,295 389.9,58.9 390.4,487.6 836.8,230 836,273.3 426.9,37.5 428,509.3   "/>
+</g>
+<g>
+    <line fill="none" id="L3_gauche"  data-move="L3_droite" data-grab="grab_L3_gauche" data-direction="y" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="426.6" y1="337.8" x2="538.2" y2="402.3"/>
+</g>
+<g>
+    <line fill="none" id="L2_gauche"  data-move="L2_droite" data-grab="grab_L2_gauche" data-direction="x" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="538.2" y1="402.3" x2="762.1" y2="273.1"/>
+</g>
+<g>
+    <line id="L4_gauche" fill="none" data-move="L4_droite" data-grab="grab_L4_gauche" data-direction="x" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="538.3" y1="272.9" x2="426.6" y2="337.8"/>
+</g>
+<g>
+    <line id="L5_centre" class="line" data-grab="grab_L5_center" data-direction="y" fill="none" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="427.7" y1="209.2" x2="538.3" y2="272.9"/>
+</g>
+<g>
+    <line fill="none" id="L1_centre" data-grab="grab_L1_center" data-direction="y" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="762.1" y1="273.1" x2="427" y2="80.3"/>
+</g>
+<g>
+    <line fill="none" id="L4_droite" data-move="L4_gauche"  data-grab="grab_L4_droite" data-direction="x" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="315.4" y1="273.6" x2="427.7" y2="209.2"/>
+</g>
+<g>
+    <line fill="none" id="L3_droite" data-move="L3_gauche" data-grab="grab_L3_droite" data-direction="y" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="204.3" y1="209.5" x2="315.4" y2="273.6"/>
+</g>
+<g>
+    <line fill="none" id="L2_droite" data-move="L2_gauche" data-grab="grab_L2_droite" data-direction="x" class="line" stroke="#F77071" stroke-width="5" stroke-miterlimit="10" x1="427" y1="80.3" x2="204.3" y2="209.5"/>
+</g>
+<g id="cercle" class="hide">
+    <g class="grab" id="grab_L3_gauche">        
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="482" cy="369.9" r="7.8"/>
+        <circle fill="#F77071" cx="482" cy="369.9" r="3.1"/>
+        <text x="480" y="369.9" perspective="500px">L3</text>
+    </g>
+    <g class="grab" id="grab_L4_gauche">
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="486" cy="303.9" r="7.8"/>
+        <circle fill="#F77071" cx="486" cy="303.9" r="3.1"/>
+        <text x="480" y="283.9" perspective="500px">L4</text>
+    </g>
+    <g class="grab" id="grab_L5_center">
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="480" cy="238.9" r="7.8"/>
+        <circle fill="#F77071" cx="480" cy="238.9" r="3.1"/>
+        <text x="480" y="238.9" perspective="500px">L5</text>
+    </g>
+    <g class="grab" id="grab_L4_droite">
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="372" cy="240.9" r="7.8"/>
+        <circle fill="#F77071" cx="372" cy="240.9" r="3.1"/>
+        <text x="366" y="240.9" perspective="500px">L4</text>
+    </g>
+    <g class="grab" id="grab_L3_droite">
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="259" cy="240.9" r="7.8"/>
+        <circle fill="#F77071" cx="259" cy="240.9" r="3.1"/>
+        <text x="252" y="224.9" perspective="500px">L3</text>
+    </g>
+    <g class="grab" id="grab_L2_droite">
+        <circle fill="#FFFFFF" stroke="#F77071" class="movel2" stroke-miterlimit="10" cx="315" cy="144.9" r="7.8"/>
+        <circle fill="#F77071" cx="315" cy="144.9" r="3.1" class="movel2"/>
+        <text x="310" y="124.9" perspective="500px">L2</text>
+    </g>
+    <g class="grab" id="grab_L1_center">
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="576" cy="164.9" r="7.8"/>
+        <circle fill="#F77071" cx="576" cy="164.9" r="3.1"/> 
+        <text x="570" y="144.9" perspective="500px">L1</text> 
+    </g>
+
+    <g class="grab" id="grab_L2_gauche">
+        <circle fill="#FFFFFF" stroke="#F77071" stroke-miterlimit="10" cx="650" cy="337.9" r="7.8"/>
+        <circle fill="#F77071" cx="650" cy="337.9" r="3.1"/>
+        <text x="650" y="337.9" perspective="500px">L2</text>
+    </g>
+</g>
+</svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="one-half column">
+                <div class="u-pull-right">
+                    <a class="btn grey" href="#step2">Précédent</a>
+                </div>
+            </div>
+            <div class="one-half column center">
+                <div class="u-pull-left">
+                    <a class="btn" href="#step5">Calculer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
